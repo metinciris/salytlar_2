@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>slayt01</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
+  <style>
+    html, body, #viewer {
+      height: 100%;
+      margin: 0;
+      background: black;
+    }
+    #viewer {
+      background: url('preview.jpg') center center no-repeat;
+      background-size: contain;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+  <script>
+    OpenSeadragon({
+      id: "viewer",
+      prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/images/",
+      tileSources: "slayt01.dzi"
+    });
+  </script>
+</body>
+</html>
